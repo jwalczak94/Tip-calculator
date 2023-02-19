@@ -130,8 +130,12 @@ h3 {
   line-height: 1rem;
 
   position: absolute;
-  top: -1.5rem;
+  top: -1.7rem;
   right: 0;
+}
+
+#warning-people {
+  top: 3.4rem;
 }
 
 .hidden {
@@ -198,7 +202,7 @@ h3 {
 
 .amount {
   color: var(--primary-700);
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: -0.7px;
 
   grid-column: 2;
@@ -302,6 +306,10 @@ h3 {
   .amount {
     font-size: 2.6rem;
     letter-spacing: -1px;
+  }
+
+  #warning-people {
+    top: -1.7rem;
   }
 }
 
