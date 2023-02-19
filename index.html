@@ -37,9 +37,8 @@
               </svg>
               <input
                 class="customer-input"
-                type="text"
-                inputmode="numeric"
-                maxlength="8"
+                type="number"
+                step="0.01"
                 placeholder="0.00"
                 id="bill" />
               <span class="warning hidden" id="warning-bill">Can't be zero or less</span>
@@ -54,12 +53,7 @@
               <button class="btn tip">10%</button>
               <button class="btn tip">15%</button>
               <button class="btn tip">20%</button>
-              <input
-                class="btn btn-custom"
-                inputmode="numeric"
-                type="text"
-                maxlength="5"
-                placeholder="Custom" />
+              <input class="btn btn-custom" type="number" step="0.01" placeholder="Custom" />
             </div>
           </div>
 
@@ -73,10 +67,8 @@
               </svg>
               <input
                 class="customer-input"
-                inputmode="numeric"
+                type="number"
                 pattern="[0-9]*"
-                type="text"
-                maxlength="4"
                 placeholder="0"
                 id="people" />
               <span class="warning hidden" id="warning-people">Can't be zero or less</span>
