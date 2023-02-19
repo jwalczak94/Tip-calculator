@@ -87,7 +87,8 @@ btnReset.addEventListener("click", function () {
   });
 
   defaultTip.classList.add("btn-active");
-  resetStyles();
+  resetStylesBill();
+  resetStylesPeople();
 });
 
 // CALCULATOR LOGIC
@@ -96,7 +97,8 @@ function calculate() {
   const numPeople = people.value;
 
   if (validateInputs(billValue, numPeople)) {
-    resetStyles();
+    resetStylesBill();
+    resetStylesPeople();
 
     const totalTip = (billValue * tipValue) / numPeople;
     const totalBill = billValue / numPeople + totalTip;
@@ -116,20 +118,28 @@ function validateInputs(billValue, numPeople) {
   if (billValue && billValue <= 0) {
     warningMessageBill.classList.remove("hidden");
     billInput.classList.add("warning-input");
+  } else {
+    resetStylesBill();
   }
 
   if (numPeople && numPeople <= 0) {
     warningMessagePeople.classList.remove("hidden");
     peopleInput.classList.add("warning-input");
+  } else {
+    resetStylesPeople();
   }
+
   console.log(numPeople > 0 && billValue > 0);
   return numPeople > 0 && billValue > 0;
 }
 
 // DEFAULT STYLE FOR INPUTS&BUTTONS
-function resetStyles() {
-  warningMessageBill.classList.add("hidden");
-  billInput.classList.remove("warning-input");
+function resetStylesPeople() {
   warningMessagePeople.classList.add("hidden");
   peopleInput.classList.remove("warning-input");
+}
+
+function resetStylesBill() {
+  warningMessageBill.classList.add("hidden");
+  billInput.classList.remove("warning-input");
 }
