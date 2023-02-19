@@ -44,9 +44,9 @@
               <input
                 class="customer-input"
                 inputmode="numeric"
-                pattern="[0-9]*"
+                pattern="[0-9,.]"
                 type="text"
-                maxlength="7"
+                maxlength="8"
                 placeholder="0.00"
                 id="bill" />
               <span class="warning hidden" id="warning-bill">Can't be zero or less</span>
@@ -61,7 +61,13 @@
               <button class="btn tip">10%</button>
               <button class="btn tip">15%</button>
               <button class="btn tip">20%</button>
-              <input class="btn btn-custom" type="number" placeholder="Custom" />
+              <input
+                class="btn btn-custom"
+                inputmode="numeric"
+                pattern="[0-9,.]"
+                type="text"
+                maxlength="5"
+                placeholder="Custom" />
             </div>
           </div>
 
@@ -98,13 +104,13 @@
           <div class="result">
             <h3>Tip Amount</h3>
             <span class="person">/ person</span>
-            <span class="amount" id="tip-total">$0</span>
+            <span class="amount" id="tip-total">$0.00</span>
           </div>
 
           <div class="result">
             <h3>Total</h3>
             <span class="person">/ person</span>
-            <span class="amount" id="total">$0</span>
+            <span class="amount" id="total">$0.00</span>
           </div>
 
           <button class="btn-reset btn-disabled">Reset</button>

@@ -75,11 +75,12 @@ people.addEventListener("input", calculate);
 
 // RESET BUTTONS
 btnReset.addEventListener("click", function () {
-  tipAmonut.textContent = "$0";
-  totalBillPerPerson.textContent = "$0";
+  tipAmonut.textContent = "$0.00";
+  totalBillPerPerson.textContent = "$0.00";
 
   bill.value = "";
   people.value = "";
+  tip.value = "";
 
   btnTips.forEach((btn) => {
     btn.classList.remove("btn-active");
